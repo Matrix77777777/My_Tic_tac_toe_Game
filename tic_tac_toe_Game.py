@@ -2,7 +2,10 @@ def draw_playing_field(value_table, slip = 30):
     '''
     Draws a game board with the current cell values.
     '''
-    pass
+    print(' '*slip, '-'*13)
+    for i in range(3):
+        print(' ' * slip, '|', value_table[0+i*3], '|', value_table[1+i*3], '|', value_table[2+i*3], '|')
+        print(' ' * slip, '-' * 13)
 
 def take_input(player_current):
     '''
