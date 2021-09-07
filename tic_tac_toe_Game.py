@@ -1,4 +1,4 @@
-def draw_playing_field(value_table, slip = 30):
+def draw_playing_field(value_table, slip = 0):
     '''
     Draws a game board with the current cell values.
     '''
@@ -23,6 +23,14 @@ player_current, player_next = 'O', 'X'
 counter = 0
 win = False
 print('*' * 10, ' TIC-TAC-TOE GAME for two players ', '*' * 10)
+
+while not win:
+    counter += 1
+    draw_playing_field(value_table)
+    if counter % 2 == 0:
+        player_current, player_next = 'O', 'X'
+    else:
+        player_current, player_next = 'X', 'O'
 
 
 
